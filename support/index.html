@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="OP trading｜選擇權量化交易研究社群介紹與自願維運補貼說明" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>OP trading｜選擇權量化交易研究</title>
+  <style>
+    :root {
+      --bg: #f5f6f8;
+      --surface: #ffffff;
+      --text: #17191d;
+      --muted: #626872;
+      --line: #e3e6ea;
+      --soft: #f8f9fb;
+      --accent: #20242b;
+      --accent-hover: #000000;
+      --radius: 18px;
+      --shadow: 0 12px 36px rgba(20, 24, 31, 0.06);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(920px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 72px 0 56px;
+    }
+
+    .hero {
+      padding: 10px 4px 34px;
+    }
+
+    .kicker {
+      margin: 0 0 12px;
+      font-size: 0.78rem;
+      font-weight: 750;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    h1, h2 {
+      margin-top: 0;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      margin-bottom: 14px;
+      font-size: clamp(2.3rem, 7vw, 4.8rem);
+      font-weight: 760;
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      font-size: 1.28rem;
+      font-weight: 720;
+    }
+
+    p { margin: 0 0 14px; }
+
+    .lead {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(1.05rem, 2.7vw, 1.24rem);
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #2d8a57;
+    }
+
+    ul {
+      margin: 14px 0 0;
+      padding-left: 1.25rem;
+    }
+
+    li + li { margin-top: 8px; }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 17px;
+      background: var(--surface);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 720;
+      transition: 160ms ease;
+    }
+
+    .button:hover {
+      border-color: #c7cbd1;
+      transform: translateY(-1px);
+    }
+
+    .button.primary {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .button.primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+    }
+
+    .button.disabled {
+      cursor: not-allowed;
+      pointer-events: none;
+      background: var(--soft);
+      color: #969ca5;
+      border-color: var(--line);
+    }
+
+    .notice {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 17px 18px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .contact {
+      word-break: break-word;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 28px 4px 0;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    footer p { margin: 0; }
+
+    @media (max-width: 680px) {
+      .page { padding-top: 46px; }
+      .split { grid-template-columns: 1fr; }
+      .card { padding: 22px; }
+      .button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="kicker">OP trading</p>
+      <h1>選擇權量化交易研究</h1>
+      <p class="lead">台股選擇權市場觀察、量化交易策略。內容無償提供，贊助僅用於伺服器、Bot、API 等維運支出；贊助與否不影響內容、推播時間或任何社群權限。</p>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <div class="label"><span class="dot" aria-hidden="true"></span>Community</div>
+        <h2>加入 Discord 社群</h2>
+        <p>社群以台股選擇權市場觀察與量化交易策略研究為主要內容。加入、觀看與接收社群內容皆不以付款或贊助為條件。</p>
+        <div class="actions">
+          <a class="button primary" href="https://discord.gg/e42HYsPRC" target="_blank" rel="noopener noreferrer">加入 Discord</a>
+        </div>
+      </section>
+
+      <div class="split">
+        <section class="card">
+          <div class="label">Access</div>
+          <h2>內容與權限</h2>
+          <ul>
+            <li>社群內容無償提供。</li>
+            <li>未贊助者與贊助者享有相同內容與權限。</li>
+            <li>贊助不影響內容、推播時間或社群資格。</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <div class="label">Support</div>
+          <h2>自願維運補貼</h2>
+          <p>若你願意支持社群持續運作，可自願補貼伺服器維護費用。贊助不會換取任何額外內容、提前推播、個別分析或專屬服務。</p>
+          <div class="actions">
+            <a class="button disabled" href="#" aria-disabled="true" tabindex="-1">歐付寶連結準備中</a>
+          </div>
+        </section>
+      </div>
+
+      <section class="card">
+        <div class="label">Risk notice</div>
+        <h2>風險與資訊性質</h2>
+        <div class="notice">
+          本社群內容涉及市場觀察、量化策略研究與交易相關資訊交流，不保證任何獲利或結果。金融商品與選擇權交易具有風險，使用者應依自身財務狀況、風險承受能力與判斷自行作成交易決策，並自行承擔相關結果。
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="label">Contact</div>
+        <h2>聯絡方式</h2>
+        <p>如有社群或維運相關問題，可透過電子郵件聯絡：</p>
+        <p><a class="contact" href="mailto:milioncardx@gmail.com">milioncardx@gmail.com</a></p>
+      </section>
+    </div>
+
+    <footer>
+      <p>© 2026 OP trading</p>
+      <p>最後更新：2026-09-11</p>
+    </footer>
+  </main>
+</body>
+</html>
